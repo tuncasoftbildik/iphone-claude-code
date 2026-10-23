@@ -22,7 +22,7 @@ Ekranı görür · dokunur · kaydırır · yazar
 
 ## ✨ Neler yapabilirsin
 
-| | |
+| Ne | Nasıl |
 |---|---|
 | 🧪 **Uygulamanı test et** | Kendi iOS uygulamanı gerçek cihazda uçtan uca gezdir, her adımın ekran görüntüsünü al |
 | 🖼️ **Mağaza görselleri** | App Store için gerçek cihazdan ekran görüntüsü serisi çıkar |
@@ -40,11 +40,11 @@ Ekranı görür · dokunur · kaydırır · yazar
 **WebDriverAgent (WDA)**, Apple'ın XCTest altyapısı üzerine kurulu açık kaynak bir araç. Telefona küçük bir test uygulaması olarak yüklenir ve `8100` portundan HTTP ile komut alır. Claude Code bu komutları çağırır, ekran görüntüsüne bakar, bir sonraki adıma kendi karar verir.
 
 ```mermaid
-flowchart LR
-    A["🧑‍💻 Sen<br/><i>'X'i aç, bildirimleri özetle'</i>"] --> B["🤖 Claude Code<br/>(Mac)"]
-    B -- "wda.sh tap / swipe / type" --> C["📡 WebDriverAgent<br/>iPhone :8100"]
-    C -- "ekran görüntüsü" --> B
-    C --> D["📱 iPhone<br/>uygulamalar"]
+flowchart TB
+    A["🧑‍💻 Sen: 'X'i aç, bildirimleri özetle'"] --> B["🤖 Claude Code · Mac"]
+    B -->|"dokun · kaydır · yaz"| C["📡 WebDriverAgent · iPhone :8100"]
+    C -->|"ekran görüntüsü"| B
+    C --> D["📱 iPhone uygulamaları"]
 ```
 
 ---
@@ -175,7 +175,7 @@ Sonra düz Türkçe ile ne istediğini söyle:
 
 ## ⚠️ Dikkat edilecekler
 
-| | |
+| Durum | Açıklama |
 |---|---|
 | ✅ **Aynı sayfa** | Dokunma, yazma, aynı sayfada sürükle-bırak: çok güvenilir |
 | ⚠️ **Sayfalar arası sürükleme** | Kenar beklemesi bazen bir sayfa eksik çeviriyor; her adımda ekran görüntüsü al |
